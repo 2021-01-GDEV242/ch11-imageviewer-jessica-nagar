@@ -25,18 +25,30 @@ public class RedTintFilter extends Filter
     {
         int height = image.getHeight();
         int width = image.getWidth();
+        Color red = new Color (255, 0, 0); 
+        Color lightRed = new Color (200, 0, 0);
+        Color medRed = new Color (150, 0, 0);
+        Color darkRed = new Color (100, 0, 0);
+        Color black = new Color(0, 0, 0);
+        
         for(int y = 0; y < height; y++) {
             for(int x = 0; x < width; x++) {
                 Color pixel = image.getPixel(x, y);
                 int brightness = (pixel.getRed());
                 if(brightness <= 85) {
-                    image.setPixel(x, y, Color.BLACK);
+                    image.setPixel(x, y, black);
+                }
+                else if(brightness <= 127) {
+                    image.setPixel(x, y, darkRed);
                 }
                 else if(brightness <= 170) {
-                    image.setPixel(x, y, Color.GRAY);
+                    image.setPixel(x, y, medRed);
+                }
+                else if(brightness <= 212) {
+                    image.setPixel(x, y, lightRed);
                 }
                 else {
-                    image.setPixel(x, y, Color.WHITE);
+                    image.setPixel(x, y, red);
                 }
             }
         }
