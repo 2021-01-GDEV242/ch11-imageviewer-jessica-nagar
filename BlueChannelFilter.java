@@ -1,33 +1,44 @@
-
+import java.awt.Color;
 /**
  * Write a description of class BlueChannelFilter here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Jessica Nagar
+ * @version 2021.04.19
  */
-public class BlueChannelFilter
+public class BlueChannelFilter extends Filter
 {
-    // instance variables - replace the example below with your own
-    private int x;
 
     /**
      * Constructor for objects of class BlueChannelFilter
      */
-    public BlueChannelFilter()
+    public BlueChannelFilter(String name)
     {
-        // initialise instance variables
-        x = 0;
+        super(name);
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Apply this filter to an image.
+     * 
+     * @param  image  The image to be changed by this filter.
      */
-    public int sampleMethod(int y)
+    public void apply(OFImage image)
     {
-        // put your code here
-        return x + y;
+        int height = image.getHeight();
+        int width = image.getWidth();
+        for(int y = 0; y < height; y++) {
+            for(int x = 0; x < width; x++) {
+                Color pixel = image.getPixel(x, y);
+                int brightness = (pixel.getBlue());
+                if(brightness <= 85) {
+                    image.setPixel(x, y, Color.BLACK);
+                }
+                else if(brightness <= 170) {
+                    image.setPixel(x, y, Color.GRAY);
+                }
+                else {
+                    image.setPixel(x, y, Color.WHITE);
+                }
+            }
+        }
     }
 }
