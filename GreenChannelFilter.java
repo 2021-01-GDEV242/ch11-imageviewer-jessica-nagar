@@ -32,8 +32,14 @@ public class GreenChannelFilter extends Filter
                 if(brightness <= 85) {
                     image.setPixel(x, y, Color.BLACK);
                 }
+                else if(brightness <= 127) {
+                    image.setPixel(x, y, Color.DARK_GRAY);
+                }
                 else if(brightness <= 170) {
                     image.setPixel(x, y, Color.GRAY);
+                }
+                else if(brightness <= 212) {
+                    image.setPixel(x, y, Color.LIGHT_GRAY);
                 }
                 else {
                     image.setPixel(x, y, Color.WHITE);
