@@ -2,7 +2,9 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.Color;
 /**
- * Write a description of class WarholFilter here.
+ * An image filter to make the image show the original colors in the top left corner
+ * red tint in the top right corner, green tint in the bottom left corner
+ * blue tint in the bottom right corner
  *
  * @author Jessica Nagar
  * @version 2021.04.19
@@ -12,6 +14,7 @@ public class WarholFilter extends Filter
 
     /**
      * Constructor for objects of class WarholFilter
+     * @param name The name of the filter.
      */
     public WarholFilter(String name)
     {

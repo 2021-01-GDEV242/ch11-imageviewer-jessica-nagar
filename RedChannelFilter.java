@@ -1,6 +1,6 @@
 import java.awt.Color;
 /**
- * Write a description of class RedChannelFilter here.
+ * An image filter to make the image show the red channel in grey scale.
  *
  * @author Jessica Nagar
  * @version 2021.04.19
@@ -10,6 +10,7 @@ public class RedChannelFilter extends Filter
 
     /**
      * Constructor for objects of class RedChannelFilter
+     * @param name The name of the filter.
      */
     public RedChannelFilter(String name)
     {

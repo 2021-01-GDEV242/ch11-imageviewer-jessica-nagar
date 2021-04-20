@@ -3,7 +3,10 @@ import java.awt.*;
 import java.io.*;
 import java.awt.Color;
 /**
- * Write a description of class FlippedWarholFilter here.
+ * An image filter to make the image show the original colors in the top left corner
+ * red tint and flipped horizonatlly in the top right corner, 
+ * green tint and flipped vertically in the bottom left corner
+ * blue tint and flipped vertically and horizontally in the bottom right corner
  *
  * @author Jessica Nagar
  * @version 2021.04.19
@@ -13,6 +16,7 @@ public class FlippedWarholFilter extends Filter
 
     /**
      * Constructor for objects of class FlippedWarholFilter
+     * @param name The name of the filter.
      */
     public FlippedWarholFilter(String name)
     {

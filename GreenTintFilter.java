@@ -1,6 +1,6 @@
 import java.awt.Color;
 /**
- * Write a description of class GreenTintFilter here.
+ * An image filter to make the image different shades of green.
  *
  * @author Jessica Nagar
  * @version 2021.04.19
@@ -10,6 +10,7 @@ public class GreenTintFilter extends Filter
 
     /**
      * Constructor for objects of class GreenTintFilter
+     * @param name The name of the filter.
      */
     public GreenTintFilter(String name)
     {

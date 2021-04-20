@@ -1,6 +1,6 @@
 import java.awt.Color;
 /**
- * Write a description of class RedTintFilter here.
+ * An image filter to make the image different shades of red.
  *
  * @author Jessica Nagar
  * @version 2021.04.19
@@ -10,6 +10,7 @@ public class RedTintFilter extends Filter
 
     /**
      * Constructor for objects of class RedTintFilter
+     * @param name The name of the filter.
      */
     public RedTintFilter(String name)
     {

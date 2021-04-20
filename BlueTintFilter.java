@@ -1,6 +1,6 @@
 import java.awt.Color;
 /**
- * Write a description of class BlueTintFilter here.
+ * An image filter to make the image diffenerent shades of blue.
  *
  * @author Jessica Nagar
  * @version 2021.04.19
@@ -10,6 +10,7 @@ public class BlueTintFilter extends Filter
 
     /**
      * Constructor for objects of class BlueTintFilter
+     * @param name The name of the filter.
      */
     public BlueTintFilter(String name)
     {
