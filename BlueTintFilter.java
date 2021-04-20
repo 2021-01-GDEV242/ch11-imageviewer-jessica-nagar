@@ -52,5 +52,5 @@ public class BlueTintFilter extends Filter
                 }
             }
         }
-    }
+    } 
 }
